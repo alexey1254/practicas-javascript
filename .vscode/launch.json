@@ -8,7 +8,8 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\aleco\\Desktop\\GitHub\\practicas-javascript\\UT2_04\\Ejercicio1\\index.html"
+            "file":"/home/daw/GitHub/practicas-javascript/UT2_04/Ejercicio1/index.html"
+            //"file": "c:\\Users\\aleco\\Desktop\\GitHub\\practicas-javascript\\UT2_04\\Ejercicio1\\index.html"
         }
     ]
 }

@@ -14,7 +14,7 @@
             <td><input type="submit" value="Ver ip generada" onclick="generarIp()"></td>
         </tr>
         <tr>
-        <td></td>
+        <td id="texto"></td>
         <td id="output"></td>
         </tr>
     </table>
@@ -34,7 +34,8 @@
             var rango = extraerRango();
             var ipGenerada = generarIpAleatoria(rango);
             var ip = ipGenerada.toString();
-            ip = String.prototype.replace(/,/g,".");
+            ip = ip.replaceAll(',','.');
+            document.getElementById("texto").innerHTML = "La ip generada es: ";
             var output = document.getElementById("output").innerHTML = ip;
         }
         function ipToString(ipGenerada) {
@@ -46,25 +47,27 @@
             rango = document.getElementById("rango").value;
             rango = rango.toLowerCase();
             return rangos[rango];
-        }
+        } 
         //Genera un numero aleatorio entre minimo inclusive y maximo exclusive
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min) + min);
         }
+        
+        //TODO: Poner las ultimas ip en 255
+        
         function generarIpAleatoria(rango) {
             ip = []
             for(let i=0;i<4;i++){
-                ip[i] = getRandomInt(rango[0],rango[1]+1);
+                if(i==0) {
+                    ip[i] = getRandomInt(rango[0],rango[1]+1);
+                } else {
+                    ip[i] = getRandomInt(rango[0],256);
+                }
+                
             }
             return ip;
         }
-        function verRango(rangoIp){
-            
-        }
         
-
-
-
     </script>
 </body>
 </html>
