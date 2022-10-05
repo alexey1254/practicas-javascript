@@ -4,11 +4,12 @@
     // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file":"/home/daw/GitHub/practicas-javascript/UT2_04/Ejercicio1/index.html"
+            "file":"/home/daw/GitHub/practicas-javascript/UT2_04/Ejercicio2/index.html"
             //"file": "c:\\Users\\aleco\\Desktop\\GitHub\\practicas-javascript\\UT2_04\\Ejercicio1\\index.html"
         }
     ]

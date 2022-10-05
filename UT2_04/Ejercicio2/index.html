@@ -21,11 +21,14 @@
     
     <script type="text/javascript">
 
-
+        // TODO: Arreglar el tostring
         function verImpares() {
             let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
+            var numeros = dimeImpares(num1,num2);
+            numeros = numeros.toString;
 
+            console.log(numeros);
         }
 
         function dimeImpares(num1,num2) {
@@ -35,6 +38,7 @@
                     numeros[j]=i;
                 }
             }
+            return numeros;
         }
         //Devuelve el numero mayor
         function numeroMayor(num1, num2) {
