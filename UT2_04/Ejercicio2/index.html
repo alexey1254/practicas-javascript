@@ -17,32 +17,35 @@
             <td><input type="text" name="numero2" id="num2"></td>
             <td><input type="submit" value="Ver numeros impares" onclick="verImpares()"></td>
         </tr>
+        <tr >
+            <td id="texto"></td>
+            <td id="resultado"></td>
+        </tr>
     </table>
     
     <script type="text/javascript">
 
-        // TODO: Arreglar el tostring
         function verImpares() {
             let num1 = document.getElementById("num1").value;
             let num2 = document.getElementById("num2").value;
-            var numeros = dimeImpares(num1,num2);
-            numeros = numeros.toString;
+            var minimo = Math.min(num1,num2);
+            var maximo = Math.max(num1,num2);
+            var numeros = dimeImpares(minimo,maximo);
+            var texto = document.getElementById("texto").innerHTML = "Los numeros son: ";
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = numeros
 
-            console.log(numeros);
+            //console.log(numeros.toString());
         }
 
-        function dimeImpares(num1,num2) {
+        function dimeImpares(minimo,maximo) {
             var numeros = [];
-            for(let i = num1,j=0; i<=numeroMayor(num1,num2); i++,j++) {
-                if(i % 2 == 0) {
-                    numeros[j]=i;
+            for(let i = minimo; i<=maximo; i++) {
+                if(i % 2 != 0) {
+                    numeros.push(i);
                 }
             }
             return numeros;
-        }
-        //Devuelve el numero mayor
-        function numeroMayor(num1, num2) {
-            return Math.max(num1,num2);
         }
     </script>
 </body>
