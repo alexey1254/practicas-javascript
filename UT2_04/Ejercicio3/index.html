@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3</title>
+</head>
+<body>
+    <p><a href="../index.html">Volver al inicio...</a></p>
+    <h1>Numeros: </h1>
+    <h3>Realiza un programa que pida números por teclado hasta que nos
+        introduzcan un número menor que 1 o mayor que 50, momento en el que se invertirán los
+        elementos dentro del array. Mostrar el array invertido. Se valorará el uso de 1 solo array para todo
+        el programa.</h3>
+    <p id="numeros"></p>
+    <script type="text/javascript">
+        var numeros=[];
+        let numeroIntroducido = prompt("Introduce un numero: ");
+        agregarNumero(numeroIntroducido);
+        /**
+         * Verifica que el numero es correcto y lo agrega al array
+         */
+        function agregarNumero(numeroUser) {
+            if(numeroCorrecto(numeroUser)) {
+                numeros.unshift(numeroUser); 
+                //Con unshift me ahorro de tener que devolver el array dado la vuelta porque pone los elementos al
+                //principio del array. En caso de querer darle la vuelta usaria reverse();
+            } else {
+                console.log("El usuario ha introducido un numero que es menor/mayor o igual a 0/50");
+            }
+        }
+        //Comprueba si el numero introducido es correcto
+        function numeroCorrecto(numero) {
+            if(numero > 0 && numero < 50) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        //Bucle principal
+        while(numeroCorrecto(numeroIntroducido)) {
+            numeroIntroducido = prompt("Introduce otro numero, para finalizar pon el 0 o el 50");
+            agregarNumero(numeroIntroducido);
+        }
+        document.getElementById("numeros").innerHTML = numeros;
+    </script>
+</body>
+</html>

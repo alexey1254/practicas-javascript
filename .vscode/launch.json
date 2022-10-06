@@ -6,12 +6,13 @@
     "configurations": [
 
 
+
         {
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
             //"file":"/home/daw/GitHub/practicas-javascript/UT2_04/Ejercicio2/index.html"
-            "file": "c:\\Users\\aleco\\Desktop\\GitHub\\practicas-javascript\\UT2_04\\Ejercicio2\\index.html"
+            "file": "c:\\Users\\aleco\\Desktop\\GitHub\\practicas-javascript\\UT2_04\\Ejercicio4\\index.html"
         }
     ]
 }

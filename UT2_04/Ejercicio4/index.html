@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+    <p><a href="../index.html">Volver al inicio...</a></p>
+    <h3>
+        Programa que pide una frase y devuelve cuantas veces aparece de cada una
+        de las 4 primeras letras del abcedario (nº de a’s, de b’s, etc.). 
+        <br/>Prueba con “Cuenta la leyenda que los dioses castigaron a algunos hombres convirtiéndolos en águilas.“
+    </h3>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="input">
+                <button type="submit" onclick="apretarBoton()">Ver</button>
+            </td>
+        </tr>
+        <tr>
+            <td id="resultado"></td>
+        </tr>
+        <tr>
+            <td id="a"></td>
+        </tr>
+        <tr>
+            <td id="b"></td>
+        </tr>
+        <tr>
+            <td id="c"></td>
+        </tr>
+        <tr>
+            <td id="d"></td>
+        </tr>
+    </table>
+    <script type="text/javascript">
+        const letras = ["a","b","c","d"];
+        
+        function apretarBoton() {
+            var input = document.getElementById("input").value;
+            input = input.toLowerCase();
+            for(let i=0;i<letras.length;i++) {
+                let letraOutput = document.getElementById(letras[i]).innerHTML = "En el texto, la letra "+letras[i]+" aparece "+contarLetra(letras[i], input)+" veces ";
+            } 
+        }
+
+        // Cuenta las veces que sale una letra en una cadena de texto
+        function contarLetra(letra, cadenaTexto) {
+            cuenta = 0;
+            posicion = cadenaTexto.indexOf(letra);
+            while ( posicion != -1 ) {
+                cuenta++;
+                posicion = cadenaTexto.indexOf(letra,posicion+1);
+            }
+            return cuenta;
+        }
+    </script>
+</body>
+</html>
