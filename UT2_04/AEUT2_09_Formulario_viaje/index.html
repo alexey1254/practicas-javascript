@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>Nombre y apellido: </td>
+                <td><input type="text" name="" id="nomApell" required onchange="noNumber()"></td>
+            </tr>
+            <tr>
+                <td>DNI/NIE:</td>
+                <td><input type="text" name="" id="dni" onchange="digitosNecesarios()" required></td>
+            </tr>
+            <tr>
+                <td>Codigo postal:</td>
+                <td><input type="number" name="" id="cod-postal"></td>
+            </tr>
+            <tr>
+                <td>Residente</td>
+                <td><select name="residente" id="">
+                    <option value="si">Si</option>
+                    <option value="no">No</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Fecha de ida:</td>
+                <td><input type="text" name="" id="fechaIda" onchange="comprobarFecha()"></td>
+            </tr>
+            <tr>
+                <td>Número de personas:</td>
+                <td><input type="number" name="" id="numPersonas" onchange="isNumber()"></td>
+            </tr>
+            <tr>
+                <td>Telefonos de contacto:</td>
+                <td><input type="number" name="" id="fijo"><input type="number" name="" id="movil" ></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="" id="email" onchange="isEmail()"></td>
+            </tr>
+            <tr>
+                <td>Redes sociales:</td>
+                <td><input type="text" name="" id="redesSociales"></td>
+            </tr>
+            <tr>
+                <td>Coche</td>
+                <td>
+                    <input type="radio" name="coche" id="cochesi" name="cochesi" value="cochesi" onclick="addMatricula()"><label for="">si</label>
+                    <input type="radio" name="coche" id="cocheno" name="cocheno" value="cocheno"><label for="">no</label>
+                </td>
+                <tr>
+                    <td>Principales motivos para la solicitud de transporte en el barco</td>
+                    <td><input type="text" name="" id="motivos" onchange="motivos()"></td>
+                </tr>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="enviar"></td>
+            </tr>
+        </table>
+    </form>
+    <script src="checkearDatos.js"></script>
+</body>
+</html>
