@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Solicitud Viaje en Barco</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    
+<link rel="stylesheet" type="text/css" href="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.css"/><script  type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cookieconsent.min.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/cookies/cauce_cookie.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-base.js"></script><script type="text/javascript" src="https://www3.gobiernodecanarias.org/educacion/cau_ce/estadisticasweb/scripts/piwik-eforma.js"></script></head>
+<body>
+
+    <div class="checkout">
+        <div>
+            <p class="title"> Formulario de Viaje </p>
+        </div>
+        <form class="form" autocomplete="off" novalidate>
+        <fieldset>
+            <label for="in_name">Nombre</label>
+            <input type="text" id="in_name" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_surename">
+            <label for="in_surname">Apellidos</label>
+            <input type="text" id="in_surname" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_dni">
+            <label for="in_dni">DNI/NIE</label>
+            <input type="text" id="in_dni_nie" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset class="fieldset_postalcode">
+            <label for="in_postalcode">Postal code</label>
+            <div class="select">
+            <select id="in_postalcode" >
+                <option>Otro</option>
+                <option>38400</option>
+                <option>38311</option>
+                <option>38450</option>
+            </select>
+            </div>
+        </fieldset>
+        <fieldset id="otros_fieldset">
+            <label for="otros">Otros ...</label>
+            <input type="text" id="otros" />
+        </fieldset>
+        <fieldset class="fieldset_postalcode">
+            <label for="residente">Residente</label>
+            <div class="select">
+            <select id="residente">
+                <option>Si</option>
+                <option>No</option>
+            </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label for="date">Fecha ida</label>
+            <input type="text" id="date" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset>
+            <label for="personas">Numero de personas</label>
+            <input type="number" id="personas" class="input-form" maxlength="10" />
+        </fieldset>
+        <fieldset>
+            <label for="tlfn-fijo">Telefono fijo</label>
+            <input type="number" id="tlfn-fijo" class="input-form" maxlength="9" />
+        </fieldset>
+        <fieldset>
+            <label for="tlfn-movil">Telefono móvil</label>
+            <input type="number" id="tlfn-movil" class="input-form" maxlength="9" />
+        </fieldset>
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" id="email" class="input-form" maxlength="9" />
+        </fieldset>
+        <fieldset>
+            <label for="twitter">Cuenta twitter</label>
+            <input type="email" id="twitter" class="input-form" maxlength="9" />
+        </fieldset>
+
+        <fieldset>
+            <label for="instagram">Cuenta instagram</label>
+            <input type="email" id="instagram" class="input-form" maxlength="9" />
+        </fieldset>
+
+        <fieldset>
+            <label for="marca">Marca</label>
+            <input type="email" id="marca" class="input-form" maxlength="9" />
+        </fieldset>
+
+        <fieldset>
+            <label for="matricula">Matrícula</label>
+            <input type="email" id="matricula" class="input-form" maxlength="9" />
+        </fieldset>
+
+
+        <fieldset>
+            <label for="motivos">Motivos</label>
+            <input type="email" id="motivos" class="input-form" maxlength="9" />
+        </fieldset>
+
+        <button onclick="validar()" type="submit" id="btn-envio" class="btn"> Enviar formulario</button>
+        </form>
+    </div>
+
+    <script src="formulario.js">
+
+    </script>
+</body>
+</html>
