@@ -17,15 +17,15 @@
         <form class="form" autocomplete="off" novalidate>
         <fieldset>
             <label for="in_name">Nombre</label>
-            <input type="text" id="in_name" class="input-form" maxlength="10" />
+            <input type="text" id="in_name" class="input-form" maxlength="10" onkeyup="check_fullName()" />
         </fieldset>
         <fieldset class="fieldset_surename">
             <label for="in_surname">Apellidos</label>
-            <input type="text" id="in_surname" class="input-form" maxlength="10" />
+            <input type="text" id="in_surname" class="input-form" maxlength="10" onkeyup="check_fullName()" />
         </fieldset>
         <fieldset class="fieldset_dni">
             <label for="in_dni">DNI/NIE</label>
-            <input type="text" id="in_dni_nie" class="input-form" maxlength="10" />
+            <input type="text" id="in_dni_nie" class="input-form" onchange="check_dni_nif()" maxlength="10" />
         </fieldset>
         <fieldset class="fieldset_postalcode">
             <label for="in_postalcode">Postal code</label>
@@ -53,7 +53,7 @@
         </fieldset>
         <fieldset>
             <label for="date">Fecha ida</label>
-            <input type="text" id="date" class="input-form" maxlength="10" />
+            <input type="text" id="date" class="input-form" maxlength="10" onchange="validarFecha()" />
         </fieldset>
         <fieldset>
             <label for="personas">Numero de personas</label>
@@ -91,7 +91,11 @@
             <input type="email" id="matricula" class="input-form" maxlength="9" />
         </fieldset>
 
-
+        <fieldset>
+            <label for="ip">Ip</label>
+            <input type="text" id="ip" class="input-form" maxlength="9" />
+        </fieldset>
+        
         <fieldset>
             <label for="motivos">Motivos</label>
             <input type="email" id="motivos" class="input-form" maxlength="9" />
