@@ -61,47 +61,47 @@
         </fieldset>
         <fieldset>
             <label for="tlfn-fijo">Telefono fijo</label>
-            <input type="number" id="tlfn-fijo" class="input-form" maxlength="9" />
+            <input type="number" id="tlfn-fijo" class="input-form" maxlength="9" onchange="checkPhone()" />
         </fieldset>
         <fieldset>
             <label for="tlfn-movil">Telefono móvil</label>
-            <input type="number" id="tlfn-movil" class="input-form" maxlength="9" />
+            <input type="number" id="tlfn-movil" class="input-form" maxlength="9" onchange="checkPhone()" />
         </fieldset>
         <fieldset>
             <label for="email">Email</label>
-            <input type="email" id="email" class="input-form" maxlength="9" />
+            <input type="email" id="email" class="input-form" />
         </fieldset>
         <fieldset>
             <label for="twitter">Cuenta twitter</label>
-            <input type="email" id="twitter" class="input-form" maxlength="9" />
+            <input type="text" id="twitter" class="input-form" maxlength="9" />
         </fieldset>
 
         <fieldset>
             <label for="instagram">Cuenta instagram</label>
-            <input type="email" id="instagram" class="input-form" maxlength="9" />
+            <input type="text" id="instagram" class="input-form" maxlength="9" />
         </fieldset>
 
         <fieldset>
             <label for="marca">Marca</label>
-            <input type="email" id="marca" class="input-form" maxlength="9" />
+            <input type="text" id="marca" class="input-form" maxlength="9" onchange="checkMarca()" />
         </fieldset>
 
         <fieldset>
             <label for="matricula">Matrícula</label>
-            <input type="email" id="matricula" class="input-form" maxlength="9" />
+            <input type="text" id="matricula" class="input-form" maxlength="9" onchange="checkMatricula()"/>
         </fieldset>
 
         <fieldset>
             <label for="ip">Ip</label>
-            <input type="text" id="ip" class="input-form" maxlength="9" />
+            <input type="text" id="ip" class="input-form" onchange="checkIp()" onchange="validar()" />
         </fieldset>
         
         <fieldset>
             <label for="motivos">Motivos</label>
-            <input type="email" id="motivos" class="input-form" maxlength="9" />
+            <input type="email" id="motivos" class="input-form" maxlength="9" onchange="validar()" />
         </fieldset>
 
-        <button onclick="validar()" type="submit" id="btn-envio" class="btn"> Enviar formulario</button>
+        <button type="submit" id="btn-envio" class="btn"> Enviar formulario</button>
         </form>
     </div>
 
